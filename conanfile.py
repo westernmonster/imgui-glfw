@@ -5,9 +5,10 @@ import shutil
 # Ideally would be able to determine what imgui is built with by downstream
 # project using this, but unsure how/more complex
 
+
 class ImguiMyConan(ConanFile):
-    name = "imgui_my"
-    version = "0.2.3"
+    name = "imgui-glfw"
+    version = "0.0.1"
     license = "<Put the package license here>"
     author = "<Put your name here> <And your email here>"
     url = "<Package recipe repository url here, for issues about the package>"
@@ -40,7 +41,6 @@ class ImguiMyConan(ConanFile):
         cmake.install()
 
     def package_info(self):
-        self.cpp_info.libs = ["imgui_my"]
+        self.cpp_info.libs = ["imgui-glfw"]
         # Will install fonts to share/fonts
         self.cpp_info.resdirs += ["share"]
-
