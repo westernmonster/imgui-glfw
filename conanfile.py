@@ -8,7 +8,7 @@ import shutil
 
 class ImguiMyConan(ConanFile):
     name = "imgui-glfw"
-    version = "0.0.1"
+    version = "0.2.3"
     license = "<Put the package license here>"
     author = "<Put your name here> <And your email here>"
     url = "<Package recipe repository url here, for issues about the package>"
@@ -27,7 +27,7 @@ class ImguiMyConan(ConanFile):
 
     def source(self):
         git = tools.Git("imgui")
-        git.clone("https://github.com/ocornut/imgui.git", shallow=True)
+        git.clone("https://github.com/ocornut/imgui.git", "docking")
         shutil.copy("CMakeLists.txt", "imgui/")
 
     def build(self):
